@@ -1,0 +1,682 @@
+
+<html>
+  <style TYPE="text/css">
+     body {
+       background: white;
+       color: #383838;
+       font-family:"Lucida Grande";
+     }
+     div.rawOutput {
+       border: .1em dotted #900;
+     }
+     div.content {
+       width: 800px
+     }
+     div.testResult {
+       text-align: center;
+       font-weight: bold;
+     }
+     div.points {
+       text-align: center;
+       font-weight: bold;
+     }
+     div.testName {
+       font-weight: bold;
+     }
+     p {
+       font-weight: bold;
+     }
+     td {
+     }
+     pre {
+       font-size: 80%;
+       margin-left: 30px;
+     }
+     hr {
+       background-color: #808080
+     }
+  </style>
+  <body>
+    <div class="content">
+    <div class="filler" style="height: 20px"></div>
+      <h2><div><p>Grade: 82.57 / 82.57</p><div></h2>
+      
+<br><p>Check your Sudoku implementation against our tests</p>
+<div class="rawOutput"><pre>Buildfile: /Users/rubenmp8/6.005student/users/jrussom/ps2-starting/build.xml
+
+init:
+    [mkdir] Created dir: /Users/rubenmp8/6.005student/users/jrussom/ps2-starting/bin
+
+compile:
+    [javac] Compiling 29 source files to /Users/rubenmp8/6.005student/users/jrussom/ps2-starting/bin
+
+testSudoku:
+    [junit] Testsuite: staff.test.P1SudokuTest
+    [junit] Tests run: 13, Failures: 1, Errors: 0, Time elapsed: 0.029 sec
+    [junit]
+    [junit] Testcase: testAssertionsEnabled took 0.002 sec
+    [junit] Testcase: testCheckRep_EstablishInvariant took 0.001 sec
+    [junit] Testcase: testCheckRep_DimConstructor_CheckSizeFieldIsCorrectValue took 0 sec
+    [junit] Testcase: testCheckRep_SquareConstructor_CheckSizeFieldIsCorrectValue took 0 sec
+    [junit] Testcase: testCheckRep_DimConstructor_CheckSquareValueIsInCorrectRange took 0 sec
+    [junit] Testcase: testCheckRep_SquareConstructor_CheckSquareValueIsInCorrectRange took 0 sec
+    [junit] Testcase: testFromFile_SimpleCompleted4x4Sudoku took 0.002 sec
+    [junit] Testcase: testFromFile_SimplePartiallyCompleted4x4Sudoku took 0 sec
+    [junit] Testcase: testFromFile_SimplePartiallyCompleted9x9Sudoku took 0.001 sec
+    [junit] Testcase: testFromFile_SimplePartiallyCompleted16x16Sudoku took 0.006 sec
+    [junit]     FAILED
+    [junit] arrays first differed at element [0][1]; expected:<11> but was:<10>
+    [junit] junit.framework.AssertionFailedError: arrays first differed at element [0][1];
+expected:<11> but was:<10>
+    [junit]     at staff.test.P1SudokuTest.testFromFile_SimplePartiallyCompleted16x16Sudoku(Unknown
+Source)
+    [junit]
+    [junit] Testcase: testFromFile_Empty4x4Sudoku took 0 sec
+    [junit] Testcase: testFromFile_ShortRowLength took 0 sec
+    [junit] Testcase: testFromFile_TooLittleRows took 0.001 sec
+
+BUILD SUCCESSFUL
+Total time: 1 second
+</pre></div>
+<br><table width="800px">
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testCheckRep_EstablishInvariant</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testCheckRep_DimConstructor_CheckSizeFieldIsCorrectValue</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testCheckRep_SquareConstructor_CheckSizeFieldIsCorrectValue</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testCheckRep_DimConstructor_CheckSquareValueIsInCorrectRange</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testCheckRep_SquareConstructor_CheckSquareValueIsInCorrectRange</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.43/0.43</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFromFile_SimpleCompleted4x4Sudoku</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.42/0.42</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFromFile_SimplePartiallyCompleted4x4Sudoku</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.43/0.43</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFromFile_SimplePartiallyCompleted9x9Sudoku</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.43/0.43</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFromFile_Empty4x4Sudoku</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.43/0.43</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFromFile_ShortRowLength</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.43/0.43</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFromFile_TooLittleRows</div></td>
+</tr></table>
+<br><hr style="background-color: #808080">
+
+<br><p>Check your Formula implementation against our tests</p>
+<div class="rawOutput"><pre>Buildfile: /Users/rubenmp8/6.005student/users/jrussom/ps2-starting/build.xml
+
+init:
+
+compile:
+
+testFormula:
+    [junit] Testsuite: staff.test.P2FormulaTest
+    [junit] Tests run: 12, Failures: 0, Errors: 0, Time elapsed: 0.018 sec
+    [junit]
+    [junit] Testcase: testAssertionsEnabled took 0.001 sec
+    [junit] Testcase: testFormulaConstructor_NoClause took 0 sec
+    [junit] Testcase: testFormulaConstructor_SingleLiteralClause took 0.001 sec
+    [junit] Testcase: testFormulaConstructor_SingleClause took 0 sec
+    [junit] Testcase: testFormula_AddClauses took 0.001 sec
+    [junit] Testcase: testFormula_AndEmptyFormula took 0 sec
+    [junit] Testcase: testFormula_AndFormula took 0.001 sec
+    [junit] Testcase: testFormula_OrOneLiteralFormula took 0 sec
+    [junit] Testcase: testFormula_OrEmptyFormula took 0 sec
+    [junit] Testcase: testFormula_OrMultipleClauseFormula took 0 sec
+    [junit] Testcase: testFormula_NotEmpty took 0 sec
+    [junit] Testcase: testFormula_NotClauses took 0 sec
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+</pre></div>
+<br><table width="800px">
+<tr>
+<td style="width:50px"><div class="points">0.66/0.66</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormulaConstructor_NoClause</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.67/0.67</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormulaConstructor_SingleLiteralClause</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.67/0.67</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormulaConstructor_SingleClause</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormula_AddClauses</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormula_AndEmptyFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormula_AndFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.66/0.66</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormula_OrOneLiteralFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.67/0.67</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormula_OrEmptyFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">0.67/0.67</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormula_OrMultipleClauseFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormula_NotEmpty</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testFormula_NotClauses</div></td>
+</tr></table>
+<br><hr style="background-color: #808080">
+
+<br><p>Check your SATSolver implementation against our tests</p>
+<div class="rawOutput"><pre>Buildfile: /Users/rubenmp8/6.005student/users/jrussom/ps2-starting/build.xml
+
+init:
+
+compile:
+
+testSatSolver:
+    [junit] Testsuite: staff.test.P3SATSolverTest
+    [junit] Tests run: 16, Failures: 0, Errors: 0, Time elapsed: 0.021 sec
+    [junit]
+    [junit] Testcase: testAssertionsEnabled took 0.001 sec
+    [junit] Testcase: testSATSolver_solveEmpty took 0.001 sec
+    [junit] Testcase: testSATSolver_solveEmptyClause took 0.001 sec
+    [junit] Testcase: testSATSolver_solveUnitFormula took 0 sec
+    [junit] Testcase: testSATSolver_solveTwoLiteralSingleClauseFormula took 0 sec
+    [junit] Testcase: testSATSolver_solveMultipleLiteralSingleClauseFormula took 0 sec
+    [junit] Testcase: testSATSolver_solveSingleLiteralTwoClauseFormula took 0 sec
+    [junit] Testcase: testSATSolver_solveSingleLiteralMultipleClauseFormula took 0 sec
+    [junit] Testcase: testSATSolver_solveNotSingleLiteral took 0.001 sec
+    [junit] Testcase: testSATSolver_solveNotMultipleLiteralSingleClauseFormula took 0 sec
+    [junit] Testcase: testSATSolver_solveNotSingleLiteralMultipleClauseFormula took 0 sec
+    [junit] Testcase: testSATSolver_solvePSetExample1 took 0 sec
+    [junit] Testcase: testSATSolver_solvePSetExample2 took 0 sec
+    [junit] Testcase: testSATSolver_solvePSetExample3 took 0 sec
+    [junit] Testcase: testSATSolver_solveExample took 0 sec
+    [junit] Testcase: testSATSolver_solveExample2 took 0.001 sec
+
+BUILD SUCCESSFUL
+Total time: 1 second
+</pre></div>
+<br><table width="800px">
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveEmpty</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveEmptyClause</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveUnitFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveTwoLiteralSingleClauseFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveMultipleLiteralSingleClauseFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveSingleLiteralTwoClauseFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveSingleLiteralMultipleClauseFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveNotSingleLiteral</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveNotMultipleLiteralSingleClauseFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveNotSingleLiteralMultipleClauseFormula</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solvePSetExample1</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solvePSetExample2</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solvePSetExample3</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">3/3</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveExample</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">3/3</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSATSolver_solveExample2</div></td>
+</tr></table>
+<br><hr style="background-color: #808080">
+
+<br><p>Check your Sudoku translator against our SAT Solver and our Sudoku tests</p>
+<div class="rawOutput"><pre>Buildfile: /Users/rubenmp8/6.005student/users/jrussom/ps2-starting/build.xml
+
+init:
+
+compile:
+
+testP4SolvesSudoku:
+    [junit] Testsuite: staff.test.P4SolveSudokuTest
+    [junit] Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 5.923 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] 1|2|3|4
+    [junit] 3|4|1|2
+    [junit] 2|3|4|1
+    [junit] 4|1|2|3
+    [junit]
+    [junit] 1|2|3|4
+    [junit] 3|4|1|2
+    [junit] 2|3|4|1
+    [junit] 4|1|2|3
+    [junit]
+    [junit] 4|1|2|3
+    [junit] 3|2|4|1
+    [junit] 2|3|1|4
+    [junit] 1|4|3|2
+    [junit]
+    [junit] 6|5|7|2|9|3|8|1|4
+    [junit] 3|8|1|4|5|6|2|9|7
+    [junit] 4|9|2|7|8|1|6|5|3
+    [junit] 2|7|9|1|4|8|3|6|5
+    [junit] 1|4|8|6|3|5|9|7|2
+    [junit] 5|3|6|9|7|2|1|4|8
+    [junit] 8|1|4|5|2|9|7|3|6
+    [junit] 9|2|5|3|6|7|4|8|1
+    [junit] 7|6|3|8|1|4|5|2|9
+    [junit]
+    [junit] 8|3|6|7|2|4|1|5|9
+    [junit] 7|4|5|9|1|3|2|6|8
+    [junit] 2|1|9|6|5|8|7|3|4
+    [junit] 5|2|1|4|7|6|8|9|3
+    [junit] 6|8|4|1|3|9|5|2|7
+    [junit] 3|9|7|5|8|2|6|4|1
+    [junit] 9|7|3|2|6|1|4|8|5
+    [junit] 4|5|2|8|9|7|3|1|6
+    [junit] 1|6|8|3|4|5|9|7|2
+    [junit]
+    [junit] 9|5|7|1|8|4|3|6|2
+    [junit] 2|8|1|9|6|3|4|7|5
+    [junit] 6|4|3|7|2|5|1|9|8
+    [junit] 4|9|6|3|5|7|8|2|1
+    [junit] 8|7|5|4|1|2|9|3|6
+    [junit] 3|1|2|8|9|6|5|4|7
+    [junit] 7|2|9|5|4|8|6|1|3
+    [junit] 5|3|4|6|7|1|2|8|9
+    [junit] 1|6|8|2|3|9|7|5|4
+    [junit]
+    [junit] 1|2|6|3|9|5|7|8|4
+    [junit] 3|5|9|8|4|7|1|6|2
+    [junit] 8|7|4|6|2|1|9|5|3
+    [junit] 9|8|5|4|1|6|2|3|7
+    [junit] 6|3|1|9|7|2|8|4|5
+    [junit] 2|4|7|5|3|8|6|9|1
+    [junit] 7|6|3|1|8|4|5|2|9
+    [junit] 4|1|8|2|5|9|3|7|6
+    [junit] 5|9|2|7|6|3|4|1|8
+    [junit]
+    [junit] 1|2|8|4|6|5|3|7|9
+    [junit] 3|7|4|2|1|9|8|5|6
+    [junit] 9|5|6|8|3|7|1|4|2
+    [junit] 7|6|5|1|9|8|4|2|3
+    [junit] 2|4|9|6|7|3|5|8|1
+    [junit] 8|1|3|5|4|2|9|6|7
+    [junit] 5|9|2|3|8|6|7|1|4
+    [junit] 4|8|7|9|2|1|6|3|5
+    [junit] 6|3|1|7|5|4|2|9|8
+    [junit]
+    [junit] 1|2|3|4
+    [junit] 3|4|1|2
+    [junit] 2|3|4|1
+    [junit] 4|1|2|3
+    [junit]
+    [junit] 1|2|3|4
+    [junit] 3|4|1|2
+    [junit] 2|3|4|1
+    [junit] 4|1|2|3
+    [junit]
+    [junit] 6|5|7|2|9|3|8|1|4
+    [junit] 3|8|1|4|5|6|2|9|7
+    [junit] 4|9|2|7|8|1|6|5|3
+    [junit] 2|7|9|1|4|8|3|6|5
+    [junit] 1|4|8|6|3|5|9|7|2
+    [junit] 5|3|6|9|7|2|1|4|8
+    [junit] 8|1|4|5|2|9|7|3|6
+    [junit] 9|2|5|3|6|7|4|8|1
+    [junit] 7|6|3|8|1|4|5|2|9
+    [junit]
+    [junit] 1|2|6|3|9|5|7|8|4
+    [junit] 3|5|9|8|4|7|1|6|2
+    [junit] 8|7|4|6|2|1|9|5|3
+    [junit] 9|8|5|4|1|6|2|3|7
+    [junit] 6|3|1|9|7|2|8|4|5
+    [junit] 2|4|7|5|3|8|6|9|1
+    [junit] 7|6|3|1|8|4|5|2|9
+    [junit] 4|1|8|2|5|9|3|7|6
+    [junit] 5|9|2|7|6|3|4|1|8
+    [junit]
+    [junit] 1|2|8|4|6|5|3|7|9
+    [junit] 3|7|4|2|1|9|8|5|6
+    [junit] 9|5|6|8|3|7|1|4|2
+    [junit] 7|6|5|1|9|8|4|2|3
+    [junit] 2|4|9|6|7|3|5|8|1
+    [junit] 8|1|3|5|4|2|9|6|7
+    [junit] 5|9|2|3|8|6|7|1|4
+    [junit] 4|8|7|9|2|1|6|3|5
+    [junit] 6|3|1|7|5|4|2|9|8
+    [junit]
+    [junit] ------------- ---------------- ---------------
+    [junit]
+    [junit] Testcase: testSolve_4x4Complete took 0.043 sec
+    [junit] Testcase: testSolve_4x4PartComplete took 0.013 sec
+    [junit] Testcase: testSolve_4x4Empty took 0.01 sec
+    [junit] Testcase: testSolve_4x4Unsolvable took 0.008 sec
+    [junit] Testcase: testSolve_9x9Basic took 0.543 sec
+    [junit] Testcase: testSolve_9x9Evil took 0.499 sec
+    [junit] Testcase: testSolve_9x9StarBurstLeo took 0.69 sec
+    [junit] Testcase: testSolve_9x9Difficult took 0.712 sec
+    [junit] Testcase: testSolve_9x9SuperDifficult took 1.083 sec
+    [junit] Testcase: testInterpretSolution_4x4Solved took 0.003 sec
+    [junit] Testcase: testInterpretSolution_4x4PartSolved took 0.005 sec
+    [junit] Testcase: testInterpretSolution_9x9Basic took 0.452 sec
+    [junit] Testcase: testInterpretSolution_9x9Difficult took 0.731 sec
+    [junit] Testcase: testInterpretSolution_9x9SuperDifficult took 1.117 sec
+
+BUILD SUCCESSFUL
+Total time: 6 seconds
+</pre></div>
+<br><table width="800px">
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_4x4Complete</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_4x4PartComplete</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_4x4Empty</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">4/4</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_4x4Unsolvable</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">3/3</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_9x9Basic</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">3/3</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_9x9Evil</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">3/3</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_9x9StarBurstLeo</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">3/3</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_9x9Difficult</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">3/3</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_9x9SuperDifficult</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testInterpretSolution_4x4Solved</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testInterpretSolution_4x4PartSolved</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testInterpretSolution_9x9Basic</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testInterpretSolution_9x9Difficult</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testInterpretSolution_9x9SuperDifficult</div></td>
+</tr></table>
+<br><hr style="background-color: #808080">
+
+<br><p>Complete integration test</p>
+<div class="rawOutput"><pre>Buildfile: /Users/rubenmp8/6.005student/users/jrussom/ps2-starting/build.xml
+
+init:
+
+compile:
+
+testSolveSudoku:
+    [junit] Testsuite: staff.test.P5SolveSudokuTest
+    [junit] Tests run: 9, Failures: 0, Errors: 0, Time elapsed: 9.177 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] 1|2|8|4|6|5|3|7|9
+    [junit] 3|7|4|2|1|9|8|5|6
+    [junit] 9|5|6|8|3|7|1|4|2
+    [junit] 7|6|5|1|9|8|4|2|3
+    [junit] 2|4|9|6|7|3|5|8|1
+    [junit] 8|1|3|5|4|2|9|6|7
+    [junit] 5|9|2|3|8|6|7|1|4
+    [junit] 4|8|7|9|2|1|6|3|5
+    [junit] 6|3|1|7|5|4|2|9|8
+    [junit]
+    [junit] ------------- ---------------- ---------------
+    [junit]
+    [junit] Testcase: testSolve_4x4Complete took 0.041 sec
+    [junit] Testcase: testSolve_4x4PartComplete took 0.012 sec
+    [junit] Testcase: testSolve_4x4Empty took 0.01 sec
+    [junit] Testcase: testSolve_4x4Unsolvable took 0.008 sec
+    [junit] Testcase: testSolve_9x9Basic took 0.553 sec
+    [junit] Testcase: testSolve_9x9Evil took 0.508 sec
+    [junit] Testcase: testSolve_9x9StarBurstLeo took 0.687 sec
+    [junit] Testcase: testSolve_9x9Difficult took 4.02 sec
+    [junit] Testcase: testSolve_9x9SuperDifficult took 3.325 sec
+
+BUILD SUCCESSFUL
+Total time: 10 seconds
+</pre></div>
+<br><table width="800px">
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_4x4Complete</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_4x4PartComplete</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_4x4Empty</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">2/2</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_4x4Unsolvable</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_9x9Basic</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_9x9Evil</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_9x9StarBurstLeo</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_9x9Difficult</div></td>
+</tr>
+
+<tr>
+<td style="width:50px"><div class="points">1/1</div></td>
+<td style="width:50px"><div class="testResult">PASS</div></td>
+<td style="width:700px"><div class="testName">testSolve_9x9SuperDifficult</div></td>
+</tr></table>
+<br><hr style="background-color: #808080">
+    </div>
+  </body>
+</html>
